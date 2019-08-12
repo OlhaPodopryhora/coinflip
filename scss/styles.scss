@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@import 'mixins.scss';
+@import 'normalize';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font: 10px/1.6 'Open Sans', serif;
+	height: 100%;
+}
+
+body {
+	font-size: 1.6rem;
+	color: #333;
+	height: 100%;
+}
+
+.coin {
+	background-color: rgb(144, 209, 186);
+	color: #fff;
+	text-align: center;
+	height: 100%;
+	padding: 50px;
+  	&__title {
+  		margin: 0;
+  		text-transform: uppercase;
+  	}
+  	&__side {
+  		cursor: pointer;
+		@include posCenter;
+  		&--tails {
+  			z-index: -1;
+  		}
+  	}
+
+  	&__img {
+  		width: 40%;
+  	}
+}
